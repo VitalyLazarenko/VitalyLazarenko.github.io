@@ -1,0 +1,79 @@
+body {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.view-control {
+    background-color: #fff;
+
+    border-radius: 5px;
+
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.viewer-container {
+    margin-top: 15px;
+
+    display: flex;
+    justify-content: space-around;
+}
+.viewer {
+    background-color: #fff;
+    border-radius: 5px;
+
+    height: 840px;
+    width: 1000px;
+}
+.figure-list {
+    background-color: #fff;
+
+    border-radius: 5px;
+
+    width: 70vh;
+    height: 90vh;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.list {
+    padding-top: 0;
+
+    width: 70vh;
+    height: 80vh;
+}
+
+.list-name {
+    margin-top: 5px;
+}
+
+.list-item {
+    background-color: rgb(119, 135, 151);
+    color: #fff;
+
+    border-radius: 5px;
+
+    width: 60vh;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 5px;
+}
+
+.title {
+    margin-left: 5px;
+}
+
+.delete {
+    margin-right: 1px;
+
+    background-color: rgb(248, 59, 59);
+    color: white;
+
+    border-radius: 5px;
+}

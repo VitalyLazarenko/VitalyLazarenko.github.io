@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./public/style.css" />
+    <title>Test-task</title>
+</head>
+<body>
+    <div class="view-control">
+        <select name="figure" id="figure">
+            <option value="Pyramid">Pyramid</option>
+            <option value="Box">Box</option>
+            <option value="Shpere">Shpere</option>
+        </select>
+
+        <input
+                class="range"
+                id="range"
+                type="range"
+                min="1"
+                max="10"
+                step="1"
+                value="1"
+        />
+
+        <button class="create-btn" id="create-figure">Create</button>
+    </div>
+
+    <div class="viewer-container">
+        <div class="viewer" id="viewer"></div>
+        <div class="figure-list" id="figure-list">
+            <h1 class="list-name">Figure item:</h1>
+            <ul id="list" class="list">
+                <li>Hello world!</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://threejs.org/build/three.js"></script>
+    <script src="https://raw.githubusercontent.com/mrdoob/three.js/master/examples/js/controls/OrbitControls.js"></script>
+</body>
+</html>

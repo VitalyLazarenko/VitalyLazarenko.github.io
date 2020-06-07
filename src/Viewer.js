@@ -33,7 +33,6 @@ export default class Viewer {
     }
 
     init() {
-        console.log(this.renderHeight + ' ' + this.renderWidth);
         this.scene.add(this.axesHelper);
         this.renderer.setSize(this.renderWidth, this.renderHeight);
         this.camera.position.z = 120;
@@ -41,6 +40,13 @@ export default class Viewer {
             this.camera,
             this.renderer.domElement
         );
+
+        const hemiLight = new THREE.HemisphereLight( 0xffffff, 0xffffff, 0.6 );
+        hemiLight.color.setHSL( 0.095, 1, 0.75 );
+        hemiLight.groundColor.setHSL( 0.6, 1, 0.6 );
+        hemiLight.position.set( 0, 100, 0 );
+        this.scene.add( hemiLight );
+
         this._animate();
     }
 
@@ -50,15 +56,15 @@ export default class Viewer {
         switch (name) {
             case 'Box':
                 geometry = new THREE.BoxGeometry(1, 1, 1);
-                material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+                material = new THREE.MeshStandardMaterial({ color: 0x00ff00 });
                 break;
             case 'Sphere':
                 geometry = new THREE.SphereGeometry(1, 32, 32);
-                material = new THREE.MeshBasicMaterial({ color: 0x0000ff });
+                material = new THREE.MeshStandardMaterial({ color: 0x0000ff });
                 break;
             case 'Pyramid':
                 geometry = new THREE.CylinderGeometry(0, 1, 1, 4);
-                material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+                material = new THREE.MeshStandardMaterial({ color: 0xff0000 });
                 break;
             default:
                 alert('Something went wrong! :D');

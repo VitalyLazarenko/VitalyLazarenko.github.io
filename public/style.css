@@ -18,21 +18,22 @@ body {
 
     display: flex;
     justify-content: space-around;
+
 }
 .viewer {
     background-color: #fff;
     border-radius: 5px;
 
-    height: 840px;
-    width: 1000px;
+    height: auto;
+    width: 50%;
 }
 .figure-list {
     background-color: #fff;
 
     border-radius: 5px;
 
-    width: 70vh;
-    height: 90vh;
+    width: 40%;
+    height: auto;
 
     display: flex;
     flex-wrap: wrap;

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="./public/style.css" />
+    <link rel="stylesheet" href="./style.css" />
     <title>Test-task</title>
 </head>
 <body>
@@ -10,7 +10,7 @@
         <select name="figure" id="figure">
             <option value="Pyramid">Pyramid</option>
             <option value="Box">Box</option>
-            <option value="Shpere">Shpere</option>
+            <option value="Sphere">Sphere</option>
         </select>
 
         <input
@@ -27,16 +27,15 @@
     </div>
 
     <div class="viewer-container">
-        <div class="viewer" id="viewer"></div>
         <div class="figure-list" id="figure-list">
             <h1 class="list-name">Figure item:</h1>
-            <ul id="list" class="list">
-                <li>Hello world!</li>
-            </ul>
+            <ul id="list-figure" class="list"></ul>
         </div>
+        <div class="viewer" id="viewer"></div>
     </div>
 
     <script src="https://threejs.org/build/three.js"></script>
-    <script src="https://raw.githubusercontent.com/mrdoob/three.js/master/examples/js/controls/OrbitControls.js"></script>
+    <script src="../libs/OrbitControls.js"></script>
+    <script src="../build/bundle.js"></script>
 </body>
 </html>
